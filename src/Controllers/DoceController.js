@@ -7,7 +7,7 @@ class DoceController{
 
     create(req,res){
         const nome_doce = req.body.nome_doce
-        const id_categorias = req.params.id_categorias
+        const id_categorias = req.body.id_categorias
         CategoriaModel.create(nome_doce,id_categorias).then(
             resposta =>{
                 console.debug("Cadastrando um doce")
